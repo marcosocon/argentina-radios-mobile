@@ -6,6 +6,7 @@ import {
     TouchableOpacity,
     StyleSheet
 } from 'react-native';
+import TrackPlayer from 'react-native-track-player';
 
 const COLOR_PALLETE = {
     primary: '#6022CD',
@@ -14,8 +15,13 @@ const COLOR_PALLETE = {
 };
 
 const StationCard = ({ navigation }) => {
+
+    const onStationPress = async () => {
+        navigation.navigate('Player')
+        await TrackPlayer.play();
+    }
     return (
-        <TouchableOpacity onPress={() => navigation.navigate('Player')}>
+        <TouchableOpacity onPress={onStationPress}>
             <View style={styles.itemContainer}>
                 <View>
                     <Image

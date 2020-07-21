@@ -7,7 +7,9 @@ async function PlayerService() {
 
   TrackPlayer.addEventListener('remote-stop', () => TrackPlayer.destroy());
 
-  TrackPlayer.addEventListener('playback-track-changed', () => {});
+  TrackPlayer.addEventListener('playback-track-changed', () => {
+    console.log('blaa')
+  });
 
   TrackPlayer.addEventListener('playback-state', (state) => {
     console.log('playback-state', state);

@@ -15,7 +15,7 @@ const Stack = createStackNavigator();
 const track = {
   id: '1',
   url:
-    'https://cdn.simplecast.com/audio/05bd32/05bd32de-6cd4-40f6-b3bd-0bdf6750dd58/9b70bc7c-6bcc-48e7-8265-90089d7a1ed3/141_tc.mp3?aid=rss_feed',
+    'https://buecrplb01.cienradios.com.ar/Mitre790.aac',
   title: '141: Jason Fried - Running the Tailwind Business on Basecamp',
   artist: 'Full Stack Radio',
 };
@@ -30,12 +30,6 @@ const App = () => {
       TrackPlayer.registerPlaybackService(() => PlayerService);
 
       await TrackPlayer.add([track]);
-
-      await TrackPlayer.play();
-
-      setTimeout(() => {
-        TrackPlayer.stop();
-      }, 2000);
     })();
   }, []);
 
