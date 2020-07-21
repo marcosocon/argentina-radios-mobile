@@ -2,25 +2,21 @@ import React from 'react';
 import {
     SafeAreaView,
     StyleSheet,
-    Dimensions,
     View,
     Text,
     StatusBar,
     ScrollView,
     TouchableWithoutFeedback,
-    TouchableOpacity,
 } from 'react-native';
 
 import { StationCard } from '../components/StationCard'
 
-const SCREEN_WIDTH = Dimensions.get('window').width
 
 const COLOR_PALLETE = {
     primary: '#6022CD',
     secondary: '#FFFFFF',
     default: '#6b6efe4f'
 };
-
 const DATA = [
     {
         title: "Recomendadas",

@@ -57,15 +57,6 @@ const styles = StyleSheet.create({
         marginTop: 60,
         marginHorizontal: 10,
         borderRadius: 25,
-    },
-    controlsContainer: {
-        flexDirection: 'row',
-        backgroundColor: 'white',
-        justifyContent: 'space-around',
-        height: 50,
-        borderRadius: 30,
-        marginHorizontal: 50,
-        marginTop: 40
     }
 });
 
