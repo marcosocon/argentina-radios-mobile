@@ -56,22 +56,22 @@ const HomeScreen = ({ navigation }) => {
                         </View>
                         <View>
                             <Text style={styles.sectionTitle}>Mas escuchadas</Text>
-                            {DATA.map(() => (
-                                <StationCard navigation={navigation} />
+                            {DATA.map((item, i) => (
+                                <StationCard navigation={navigation} key={i}/>
                             )
                             )}
                         </View>
                         <View>
                             <Text style={styles.sectionTitle}>Escuchadas Recientemente</Text>
-                            {DATA.map(() => (
-                                <StationCard navigation={navigation} />
+                            {DATA.map((item, i) => (
+                                <StationCard navigation={navigation} key={i}/>
                             )
                             )}
                         </View>
                         <View>
                             <Text style={styles.sectionTitle}>Recomendados para tí</Text>
-                            {DATA.map(() => (
-                                <StationCard navigation={navigation} />
+                            {DATA.map((item, i) => (
+                                <StationCard navigation={navigation} key={i}/>
                             )
                             )}
                         </View>

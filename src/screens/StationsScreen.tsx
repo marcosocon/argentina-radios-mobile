@@ -7,7 +7,7 @@ import {
     StatusBar,
     TouchableOpacity,
 } from 'react-native';
-import { StationCard } from './../components/StationCard';
+import { StationCard } from '../components/StationCard';
 
 
 const COLOR_PALLETE = {
@@ -16,7 +16,7 @@ const COLOR_PALLETE = {
     default: '#6b6efe4f'
 };
 
-const StationsScreen = ({ navigation }) => {
+const StationsScreen = ({ navigation } : any) => {
     return (
         <>
             <StatusBar barStyle="dark-content" />

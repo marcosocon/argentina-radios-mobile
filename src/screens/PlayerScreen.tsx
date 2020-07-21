@@ -1,4 +1,5 @@
 import React from 'react';
+import FeatherIcon from 'react-native-vector-icons/Feather';
 import {
     SafeAreaView,
     StyleSheet,
@@ -15,22 +16,24 @@ const COLOR_PALLETE = {
     default: '#6b6efe4f'
 };
 
-const PlayerScreen = ({ navigation }) => {
+const ICON_SIZE = 30;
+
+const PlayerScreen = ({ navigation } : any) => {
     return (
         <>
             <StatusBar barStyle="dark-content" />
             <SafeAreaView style={styles.container}>
                 <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-                    <Text> O </Text>
+                    <FeatherIcon name="chevron-left" size={ICON_SIZE}/>
                 </TouchableOpacity>
                 <View style={styles.mainPanel}>
                 </View>
                 <View style={styles.controlsContainer}>
                     <TouchableOpacity>
-                        <Text>play</Text>
+                        <FeatherIcon name="play" size={ICON_SIZE}/>
                     </TouchableOpacity>
                     <TouchableOpacity>
-                        <Text>pause</Text>
+                        <FeatherIcon name="stop-circle" size={ICON_SIZE}/>
                     </TouchableOpacity>
                 </View>
             </SafeAreaView>
@@ -50,6 +53,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         width: 40,
         height: 40,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     mainPanel: {
         backgroundColor: COLOR_PALLETE.secondary,
