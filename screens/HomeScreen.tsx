@@ -11,7 +11,7 @@ import {
     TouchableOpacity,
 } from 'react-native';
 
-import { StationCard } from './../components/StationCard'
+import { StationCard } from '../components/StationCard'
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 

@@ -7,7 +7,9 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { HomeScreen } from './screens/Home';
+import { HomeScreen } from './screens/HomeScreen';
+import { PlayerScreen } from './screens/PlayerScreen';
+import { StationsScreen } from './screens/StationsScreen';
 
 const Stack = createStackNavigator();
 
@@ -16,27 +18,11 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Player" component={PlayerScreen} />
-        <Stack.Screen name="StationsList" component={StationsListScreen} />
+        <Stack.Screen name="Player" component={PlayerScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="StationsList" component={StationsScreen} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
-}
-
-const StationsListScreen = () => {
-  return (
-    <View>
-      <Text>Stations list</Text>
-    </View>
-  )
-}
-
-const PlayerScreen = () => {
-  return (
-    <View>
-      <Text>Player</Text>
-    </View>
-  )
 }
 
 export default App;
