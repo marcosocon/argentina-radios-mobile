@@ -15,7 +15,7 @@ const Stack = createStackNavigator();
 const track = {
   id: '1',
   url:
-    'https://buecrplb01.cienradios.com.ar/Mitre790.aac',
+    'https://traffic.libsyn.com/secure/mattdavella/Paul_Jarvis_Full_Interview-MP3_for_Audio_Podcasting.mp3?dest-id=488991',
   title: '141: Jason Fried - Running the Tailwind Business on Basecamp',
   artist: 'Full Stack Radio',
 };

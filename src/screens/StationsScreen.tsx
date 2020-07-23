@@ -5,10 +5,13 @@ import {
     View,
     Text,
     StatusBar,
-    TouchableOpacity,
+    FlatList,
+    TextInput,
 } from 'react-native';
-import { StationCard } from '../components/StationCard';
 
+import { StationCard } from '../components/StationCard';
+import { HeaderWithBack } from './../components/HeaderWithBack';
+import { SearchBar } from './../components/SearchBar';
 
 const COLOR_PALLETE = {
     primary: '#6022CD',
@@ -16,21 +19,75 @@ const COLOR_PALLETE = {
     default: '#6b6efe4f'
 };
 
+
+const DATA = [
+    {
+        id: 1,
+        title: 'Text 1'
+    },
+    {
+        id: 2,
+        title: 'Text 2'
+    },
+    {
+        id: 3,
+        title: 'Text 3'
+    },
+    {
+        id: 1,
+        title: 'Text 1'
+    },
+    {
+        id: 2,
+        title: 'Text 2'
+    },
+    {
+        id: 3,
+        title: 'Text 3'
+    },
+    {
+        id: 1,
+        title: 'Text 1'
+    },
+    {
+        id: 2,
+        title: 'Text 2'
+    },
+    {
+        id: 3,
+        title: 'Text 3'
+    },
+    {
+        id: 1,
+        title: 'Text 1'
+    },
+    {
+        id: 2,
+        title: 'Text 2'
+    },
+    {
+        id: 3,
+        title: 'Text 3'
+    },
+];
+
+
+const renderItem = ({item}) => {
+    return (<StationCard navigation={{}} />)
+}
+
 const StationsScreen = ({ navigation } : any) => {
     return (
         <>
             <StatusBar barStyle="dark-content" />
             <SafeAreaView style={styles.container}>
-                <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-                    <Text> O </Text>
-                </TouchableOpacity>
+                <HeaderWithBack navigation={navigation} />
+                <View style={styles.titleContainer}>
+                    <Text style={styles.title}>Todas las estaciones</Text>
+                </View>
+                <SearchBar />
                 <View style={styles.mainPanel}>
-                    <StationCard navigation />
-                    <StationCard navigation />
-                    <StationCard navigation />
-                    <StationCard navigation />
-                    <StationCard navigation />
-                    <StationCard navigation />
+                    <FlatList data={DATA} renderItem={renderItem} keyExtractor={(item) => item.id}/>
 
                 </View>
             </SafeAreaView>
@@ -44,18 +101,20 @@ const styles = StyleSheet.create({
         backgroundColor: COLOR_PALLETE.primary,
         flex: 1,
     },
-    backButton: {
-        margin: 15,
-        borderRadius: 400,
-        backgroundColor: 'white',
-        width: 40,
-        height: 40,
+    titleContainer: {
+        marginHorizontal: 10,
+    },
+    title: {
+        fontFamily: 'Raleway-Bold',
+        fontSize: 24,
+        color: 'white'
     },
     mainPanel: {
         backgroundColor: COLOR_PALLETE.secondary,
         height: '100%',
-        marginTop: 60,
-        marginHorizontal: 10,
+        marginTop: 20,
+        paddingTop: 20,
+        paddingHorizontal: 10,
         borderRadius: 25,
     }
 });
